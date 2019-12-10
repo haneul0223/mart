@@ -277,13 +277,7 @@ smart <- function(alts, data, rank, cost, get.w = "roc", eff.cost.ratio = c(1, 1
   class(res) <- "smart"
   return(res)
 }
-# 기본형
-res <- smart(alts = company, data = dat, rank = c(1,3,2,4), cost = c(F,T,F,F), linear = F)
-res
 
-# 비례점수 적용
-res <- smart(alts = company, data = dat2, rank = c(1,3,2,4), cost = c(F,T,F,F), linear = T, eff.cost.ratio = c(30, 70))
-res
 
 # 정규화 되지 않은 data
 # res <- smart(alts = company, data = dat2, rank = c(1,3,2,4), cost = c(F,T,F,F), linear = F, eff.cost.ratio = c(30, 70))
@@ -345,4 +339,4 @@ summary.smart <- function(x) {
 
   cat('Alternatives Ranking :', ranking)
 }
-summary.smart(res)
+
